@@ -37,7 +37,7 @@ The calculator starts from the selected DT and spends available DTP according to
 
 ## Usage
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/db083ede-d531-4b2f-9207-194c7e0643cb" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f407088b-1aeb-49a0-aba4-b3318e255061" />
 
 ### Generate a Macro / DT Import
 1. Select a preset from the **blue box**.
