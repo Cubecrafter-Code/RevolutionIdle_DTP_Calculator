@@ -116,19 +116,19 @@ The DT output uses the exact same format as the DT input, matching the native fo
 
 Clone the repository:
 ```bash
-git clone https://github.io
+git clone https://github.com/Cubecrafter-Code/RevolutionIdle_DTP_Calculator.git
 ```
 
-Open the project folder and serve it with any static web server. For example, using Python:
+Open the project folder:
+```bash
+cd RevolutionIdle_DTP_Calculator
+```
+
+Serve it with any static web server. For example, using Python:
 ```bash
 python -m http.server
 ```
 Then open your browser and navigate to: `http://localhost:8000`
-
-### Example
-* **Input DTP:** `65`
-* **Input Preset:** `DP`
-* **Output:** `DTU(CENTER, ...)` / `DTU(MIDDLE, ...)` and `C5;T1,5,1,5;M5,5,5,5;B5,5,5,5`
 
 ---
 
