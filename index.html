@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revolution Idle DTP Calc</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="main.js" defer></script>
+    <!-- 
+    uncomment when testing 
+    also remember to move
+      - points
+      - stringToArray
+      - arrayToMacro
+    out of calc() and into the global scope so the test file can access them.
+    -->
+    <!-- -->
+    <script src="tests.js"></script>
+    <!-- -->
+  </head>
+  <body>
+    <div id="container">
+      <h1>Revolution Idle DTP Calc</h1>
+
+      <div id="inputDtpDiv">
+        <input type="number" id="dtpInput" placeholder="Enter DTP" />
+        <button id="calc">Calculate</button>
+      </div>
+      <div id="outputContainer">
+        <div id="macroOutput">
+          <p>Macro Import</p>
+          <button class="outputButton">Macro import</button>
+        </div>
+        <div id="dtOutput">
+          <p>DT Import:</p>
+          <button class="outputButton">DT import</button>
+        </div>
+      </div>
+
+      <div id="choosePreset" class="buttonSelect">
+        <!--
+          <button onclick="changePreset(event)">DP</button>
+          <button onclick="changePreset(event)">Sn</button>
+          <button onclick="changePreset(event)">Ap</button>
+          -->
+      </div>
+
+      <div id="inputModeContainer" class="buttonSelect">
+        <button onclick="changeInputMode(event, 'DT')">
+          <p>Import DT</p>
+          <input type="radio" name="inputMode" class="radioInput" />
+        </button>
+        <button onclick="changeInputMode(event, 'Instructions')">
+          <p>Import Instructions</p>
+
+          <input type="radio" name="inputMode" class="radioInput" />
+        </button>
+        <button onclick="changeInputMode(event, 'new Preset')">
+          <p>Create new Preset</p>
+          <input type="radio" name="inputMode" class="radioInput" />
+        </button>
+      </div>
+      <div id="presetInputContainer">
+        <input id="presetInput" placeholder="Choose Mode First" />
+
+        <button onclick="managePresets(event)" id="savePresetButton">
+          Save to Preset
+        </button>
+      </div>
+      <h1 id="presetHeader">Select a Preset</h1>
+    </div>
+  </body>
+</html>

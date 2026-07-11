@@ -1,0 +1,229 @@
+* {
+  overflow: auto;
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+h1 {
+  font-weight: bold;
+  justify-self: center;
+  align-self: center;
+
+  border: 5px solid #0007;
+  padding: 5px;
+  background: #59f;
+  grid-column: 1 / -1;
+}
+
+div {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-gap: 20px;
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #000;
+}
+
+input {
+  background: #444;
+  color: #fff;
+  border: 3px solid #000;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-family:
+    "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  touch-action: none;
+}
+
+body {
+  background: linear-gradient(135deg, #000, #a0f);
+}
+
+.selected {
+  color: white;
+  background: #171717;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 1px;
+}
+
+.buttonSelect {
+  display: grid !important;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 10px !important;
+  padding: 10px;
+
+  button {
+    grid-row: 1/ -1;
+    margin: 0;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+.radioInput {
+  pointer-events: none;
+  grid-row: 2;
+  margin: 0;
+}
+
+#container {
+  padding: 10px;
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  top: 2%;
+  justify-self: center;
+
+  grid-template-rows: repeat(5, 3fr) 2fr 3fr;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#inputDtpDiv {
+  display: flex;
+  gap: 0;
+  input {
+    flex: 2;
+  }
+
+  button {
+    flex: 1;
+  }
+
+  background: #fff5;
+  border: 5px solid #000a;
+}
+
+#outputContainer {
+  background: #fff5;
+  border: 5px solid #000a;
+
+  grid-row: 3/-1;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+
+  div {
+    padding: 10px;
+
+    grid-column: span 1;
+    grid-row: 1 / -1;
+
+    p {
+      border: 2px solid #000;
+      padding: 10px;
+      margin: 0;
+      grid-row: 1/-2;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      grid-row: -1;
+    }
+  }
+}
+
+#choosePreset {
+  background: #fff5;
+  border: 5px solid #000a;
+  gap: 0;
+  display: flex;
+
+  button {
+    flex: 1;
+
+    p {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+#inputModeContainer {
+  background: #fff5;
+  border: 5px solid #000a;
+  gap: 0;
+  display: flex;
+
+  button {
+    flex: 1;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+#presetInputContainer {
+  background: #fff5;
+  border: 5px solid #000a;
+  gap: 0;
+  grid-row: span 2;
+
+  input,
+  button {
+    grid-column: span 3;
+  }
+  button {
+    border-top: 3px solid #000;
+  }
+}
+
+#presetHeader {
+  width: 100%;
+  height: 100%;
+  background: #fff5;
+  border: 5px solid #000a;
+
+  grid-column: span 3;
+  grid-row: span 2;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 0;
+}
